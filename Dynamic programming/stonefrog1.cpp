@@ -13,6 +13,7 @@ signed main(){
     while (q--) solve();  
     return 0 ^ 0;
 }    
+/* https://www.lqdoj.edu.vn/problem/stonefrog1 */
 const int N = 1e5 + 97; 
 int a[N], dp[N]; 
 void solve(){
