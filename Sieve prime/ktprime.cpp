@@ -16,6 +16,7 @@ signed main(){
 /* https://www.lqdoj.edu.vn/problem/ktprime */   
 #define int long long
 
+// O(sqrt(N)) -> N <= 10^16
 bool prime_1(int n){
     if (n < 4) return n > 1;
     for(int i = 2; i * i <= n; i++){
@@ -24,6 +25,7 @@ bool prime_1(int n){
     return true;
 }
 
+// O(sqrt(N)/6) -> N <= 10^18
 bool prime_2(int n){
     if (n < 4) return n > 1;
     if (n % 2 == 0 || n % 3 == 0) return false;
@@ -33,6 +35,7 @@ bool prime_2(int n){
     return true;
 }
 
+// O(Log(N).K) -> K = 3, N <= 10^9
 int pow_1(int a, int b, int n){
     int r = 1;
     while (b > 0){
@@ -63,6 +66,7 @@ bool miller_1(int n) {
     return true;
 }
 
+// O(Log(N)^2.K) -> K = 9, N <= 10^18
 int mul_2(int a, int b, int n){
     int r = 0;
     while (b > 0){
